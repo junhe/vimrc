@@ -4,6 +4,7 @@ set showmode
 
 set nu
 
+let g:neocomplcache_enable_at_startup = 1
 
 " For latex
 " let g:Tex_ViewRule_pdf = 'Skim'

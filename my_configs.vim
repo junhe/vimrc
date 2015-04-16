@@ -11,3 +11,9 @@ let g:neocomplcache_enable_at_startup = 1
 " let g:Tex_MultipleCompileFormats = 'dvi,pdf'
 " set iskeyword+=:
 " set iskeyword+=-
+
+
+" For latex
+nmap <leader>ll :!make<cr>
+nmap <leader>lv :!make view<cr>
+

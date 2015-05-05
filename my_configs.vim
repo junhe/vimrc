@@ -15,8 +15,10 @@ let g:neocomplcache_enable_at_startup = 1
 
 
 " For latex
-nmap <leader>ll :!make<cr>
+nmap <leader>ll :w <bar> !make<cr>
 nmap <leader>lv :!make view<cr>
-
+nmap <leader>la :w <bar> !make && make view<cr>
+nmap <leader>lcd :lcd %:p:h<cr>
+nmap <leader>ltw :se tw=80<cr>
 
 

@@ -30,3 +30,8 @@ endif
 
 nnoremap <Space> za
 
+set cindent
+
+
+autocmd FileType python setlocal foldmethod=indent|:normal zR
+

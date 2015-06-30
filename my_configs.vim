@@ -29,9 +29,13 @@ if has("autocmd")
 endif
 
 nnoremap <Space> za
+noremap <F9> zfa}
 
+" For indent
 set cindent
-
-
 autocmd FileType python setlocal foldmethod=indent|:normal zR
 
+
+" Press F5 in normal mode or in insert mode to insert the current datestamp: :help i_CTRL-R
+nnoremap <F5> "=strftime("%c")<CR>P
+inoremap <F5> <C-R>=strftime("%c")<CR>

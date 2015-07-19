@@ -35,7 +35,19 @@ noremap <F9> zfa}
 set cindent
 autocmd FileType python setlocal foldmethod=indent|:normal zR
 
+autocmd FileType markdown setlocal wrap 
+
+" For coding style
+autocmd FileType python,c,cpp match ErrorMsg '\%>79v.\+'
 
 " Press F5 in normal mode or in insert mode to insert the current datestamp: :help i_CTRL-R
 nnoremap <F5> "=strftime("%c")<CR>P
 inoremap <F5> <C-R>=strftime("%c")<CR>
+
+" for temporary textwidth. Useful for comments
+:noremap <F8> :setlocal tw=79<CR> <bar> :normal gqap<CR> <bar> :setlocal tw=0<CR>
+
+
+
+
+

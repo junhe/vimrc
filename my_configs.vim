@@ -47,7 +47,30 @@ inoremap <F5> <C-R>=strftime("%c")<CR>
 " for temporary textwidth. Useful for comments
 :noremap <F8> :setlocal tw=79<CR> <bar> :normal gqap<CR> <bar> :setlocal tw=0<CR>
 
+" for Ctags
+" To use Ctags, in Ubuntu, you need to do :
+" sudo apt-get install exuberant-ctags
+" Useful tutorial
+" http://amix.dk/blog/post/19329
+" http://www.thegeekstuff.com/2009/04/ctags-taglist-vi-vim-editor-as-sourece-code-browser/
+" We only have ctags, taglist is not working. So don't bother read taglist part of the articles
+function! DelTagOfFile(file)
+  let fullpath = a:file
+  let cwd = getcwd()
+  let tagfilename = cwd . "/tags"
+  let f = substitute(fullpath, cwd . "/", "", "")
+  let f = escape(f, './')
+  let cmd = 'sed -i "/' . f . '/d" "' . tagfilename . '"'
+  let resp = system(cmd)
+endfunction
 
-
-
+function! UpdateTags()
+  let f = expand("%:p")
+  let cwd = getcwd()
+  let tagfilename = cwd . "/tags"
+  let cmd = 'ctags -a -f ' . tagfilename . ' --c++-kinds=+p --fields=+iaS --extra=+q ' . '"' . f . '"'
+  call DelTagOfFile(f)
+  let resp = system(cmd)
+endfunction
+autocmd BufWritePost *.cpp,*.h,*.c,*.py call UpdateTags()
 

@@ -47,6 +47,7 @@ inoremap <F5> <C-R>=strftime("%c")<CR>
 " for temporary textwidth. Useful for comments
 :noremap <F8> :setlocal tw=79<CR> <bar> :normal gqap<CR> <bar> :setlocal tw=0<CR>
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " for Ctags
 " To use Ctags, in Ubuntu, you need to do :
 " sudo apt-get install exuberant-ctags
@@ -73,4 +74,9 @@ function! UpdateTags()
   let resp = system(cmd)
 endfunction
 autocmd BufWritePost *.cpp,*.h,*.c,*.py call UpdateTags()
+
+
+" For taglist
+nmap <leader>tl :TlistToggle<cr>
+
 

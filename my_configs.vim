@@ -79,4 +79,8 @@ autocmd BufWritePost *.cpp,*.h,*.c,*.py call UpdateTags()
 " For taglist
 nmap <leader>tl :TlistToggle<cr>
 
+" For tagbar
+" Use TagBar instead of TagList, it is better
+nmap <leader>tb :TagbarToggle<cr>
+
 

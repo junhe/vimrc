@@ -82,5 +82,6 @@ nmap <leader>tl :TlistToggle<cr>
 " For tagbar
 " Use TagBar instead of TagList, it is better
 nmap <leader>tb :TagbarToggle<cr>
-
+" autocmd BufEnter * nested :call tagbar#autoopen(0)
+autocmd FileType python TagbarToggle
 

@@ -21,6 +21,13 @@ nmap <leader>lv :!make view<cr>
 nmap <leader>la :w <bar> !make && make view<cr>
 nmap <leader>lcd :lcd %:p:h<cr>
 nmap <leader>ltw :se tw=80<cr>
+autocmd FileType tex setlocal tw=80
+
+" For latex-box
+" Toggle TOC
+nmap <leader>lt :LatexTOCToggle<cr>
+
+
 
 " for vim-markdown-folding
 set nocompatible
@@ -84,4 +91,7 @@ nmap <leader>tl :TlistToggle<cr>
 nmap <leader>tb :TagbarToggle<cr>
 " autocmd BufEnter * nested :call tagbar#autoopen(0)
 autocmd FileType python TagbarToggle
+
+
+
 

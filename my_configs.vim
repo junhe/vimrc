@@ -17,11 +17,17 @@ let g:neocomplcache_enable_at_startup = 1
 " For latex
 nmap <leader>ll :w <bar> !make silent<cr>
 nmap <leader>ll :w <bar> !make<cr>
+" Latexmk will allow you to pinpoint error in file
+nmap <leader>lm :w <bar> Latexmk<cr> 
 nmap <leader>lv :!make view<cr>
 nmap <leader>la :w <bar> !make && make view<cr>
 nmap <leader>lcd :lcd %:p:h<cr>
 nmap <leader>ltw :se tw=80<cr>
 autocmd FileType tex setlocal tw=80
+autocmd FileType tex setlocal nonumber
+
+" re-format a paragraph
+nnoremap <leader>r gq}
 
 " For latex-box
 " Toggle TOC

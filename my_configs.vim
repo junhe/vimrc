@@ -46,7 +46,7 @@ noremap <F9> zfa}
 
 " For indent
 set cindent
-autocmd FileType python setlocal foldmethod=indent|:normal zR
+autocmd FileType python,r setlocal foldmethod=indent|:normal zR
 
 autocmd FileType markdown setlocal wrap 
 

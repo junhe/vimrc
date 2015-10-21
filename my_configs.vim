@@ -98,6 +98,17 @@ nmap <leader>tb :TagbarToggle<cr>
 " autocmd BufEnter * nested :call tagbar#autoopen(0)
 autocmd FileType python TagbarToggle
 
+" For R
+" https://github.com/majutsushi/tagbar/wiki#r
+" Note that you also need to edit ~/.ctags
+let g:tagbar_type_r = {
+    \ 'ctagstype' : 'r',
+    \ 'kinds'     : [
+        \ 'f:Functions',
+        \ 'g:GlobalVariables',
+        \ 'v:FunctionVariables',
+    \ ]
+\ }
 
 
 

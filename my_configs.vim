@@ -94,9 +94,22 @@ nmap <leader>tl :TlistToggle<cr>
 
 " For tagbar
 " Use TagBar instead of TagList, it is better
-nmap <leader>tb :TagbarToggle<cr>
+nmap <leader>tt :TagbarToggle<cr>
+nmap <leader>to :TagbarOpen<cr>
+nmap <leader>tp :TagbarTogglePause<cr>
+nmap <leader>toc :TagbarOpenAutoClose<cr>
 " autocmd BufEnter * nested :call tagbar#autoopen(0)
-autocmd FileType python TagbarToggle
+"autocmd FileType python TagbarToggle
+setlocal updatetime=800
+let g:tagbar_sort = 0 " sort according to in-file order
+
+
+syntax enable
+set background=dark
+"let g:solarized_termcolors=256
+colorscheme solarized
+
+
 
 " For R
 " https://github.com/majutsushi/tagbar/wiki#r

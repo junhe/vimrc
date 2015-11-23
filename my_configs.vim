@@ -106,7 +106,7 @@ let g:tagbar_sort = 0 " sort according to in-file order
 
 syntax enable
 set background=dark
-"let g:solarized_termcolors=256
+set t_Co=16
 colorscheme solarized
 
 

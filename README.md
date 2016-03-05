@@ -12,12 +12,12 @@ I would of course recommend using the awesome version.
 ## How to install the Awesome version?
 The awesome version includes a lot of great plugins, configurations and color schemes that make Vim a lot better. To install it simply do following:
 
+	git config --global user.name "Jun He"
+	git config --global user.email jhe@cs.wisc.edu
 	git clone git://github.com/junhe/vimrc.git ~/.vim_runtime
 	sh ~/.vim_runtime/install_awesome_vimrc.sh
 	sudo apt-get install exuberant-ctags # for tagbar plugin
 	cat ~/.vim_runtime/misc/ctags-home-config >> ~/.ctags
-	git config --global user.name "Jun He"
-	git config --global user.email jhe@cs.wisc.edu
 
 The taglist.vim plugin will require ctags (http://ctags.sourceforge.net) (Debian: apt-get install ctags)
 

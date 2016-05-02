@@ -97,7 +97,7 @@ nmap <leader>tl :TlistToggle<cr>
 nmap <leader>tt :TagbarToggle<cr>
 nmap <leader>to :TagbarOpen<cr>
 nmap <leader>tp :TagbarTogglePause<cr>
-nmap <leader>toc :TagbarOpenAutoClose<cr>
+nmap <leader>ttt :TagbarOpenAutoClose<cr>
 " autocmd BufEnter * nested :call tagbar#autoopen(0)
 "autocmd FileType python TagbarToggle
 setlocal updatetime=800

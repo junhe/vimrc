@@ -134,3 +134,22 @@ function! QuickfixFilenames()
   return join(map(values(buffer_numbers), 'fnameescape(v:val)'))
 endfunction
 
+function Dirsub(target, replacement, files)
+    let cmd0 = "args ".a:files
+    echo cmd0
+    exe cmd0
+
+    let cmd1 = "vimgrep /".a:target."/g ".a:files
+    echo cmd1
+    exe cmd1
+
+    Qargs
+
+    let cmd2 = "argdo %s/".a:target."/".a:replacement."/g"
+    echo cmd2
+    exe cmd2
+    argdo update
+endfunction
+
+
+

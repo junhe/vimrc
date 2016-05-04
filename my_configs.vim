@@ -135,6 +135,10 @@ function! QuickfixFilenames()
 endfunction
 
 function Dirsub(target, replacement, files)
+    " Note that target and replacement may need escape chars because
+    " you are passing them around. 
+    " For example, Dirsub("\<file01\>", "filefirst", "**/*.py") won't work
+    " You should use Dirsub("\\<file01\\>", "filefirst", "**/*.py")
     let cmd0 = "args ".a:files
     echo cmd0
     exe cmd0
@@ -148,7 +152,8 @@ function Dirsub(target, replacement, files)
     let cmd2 = "argdo %s/".a:target."/".a:replacement."/g"
     echo cmd2
     exe cmd2
-    argdo update
+
+    "argdo update
 endfunction
 
 

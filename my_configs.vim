@@ -23,7 +23,7 @@ nmap <leader>lv :!make view<cr>
 nmap <leader>la :w <bar> !make && make view<cr>
 nmap <leader>lcd :lcd %:p:h<cr>
 nmap <leader>ltw :se tw=80<cr>
-autocmd FileType tex setlocal tw=80
+autocmd FileType tex setlocal tw=70
 autocmd FileType tex setlocal nonumber
 
 " re-format a paragraph
@@ -155,6 +155,5 @@ function Dirsub(target, replacement, files)
 
     "argdo update
 endfunction
-
 
 

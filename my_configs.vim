@@ -13,6 +13,10 @@ let g:neocomplcache_enable_at_startup = 1
 " set iskeyword+=:
 " set iskeyword+=-
 
+" For latex-box
+let g:LatexBox_split_width = 50
+filetype plugin on
+let g:LatexBox_Folding = 1
 
 " For latex
 nmap <leader>ll :w <bar> !make silent<cr>
@@ -40,6 +44,7 @@ set nocompatible
 if has("autocmd")
   filetype plugin indent on
 endif
+
 
 nnoremap <Space> za
 noremap <F9> zfa}

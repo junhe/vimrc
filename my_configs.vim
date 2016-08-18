@@ -19,7 +19,7 @@ filetype plugin on
 let g:LatexBox_Folding = 1
 
 " For latex
-nmap <leader>ll :w <bar> !make silent<cr>
+"nmap <leader>ll :w <bar> !make silent<cr>
 nmap <leader>ll :w <bar> !make<cr>
 " Latexmk will allow you to pinpoint error in file
 nmap <leader>lm :w <bar> Latexmk<cr> 
@@ -27,7 +27,7 @@ nmap <leader>lv :!make view<cr>
 nmap <leader>la :w <bar> !make && make view<cr>
 nmap <leader>lcd :lcd %:p:h<cr>
 nmap <leader>ltw :se tw=80<cr>
-autocmd FileType tex setlocal tw=70
+autocmd FileType tex setlocal tw=60
 autocmd FileType tex setlocal nonumber
 
 " re-format a paragraph
@@ -91,7 +91,7 @@ function! UpdateTags()
   call DelTagOfFile(f)
   let resp = system(cmd)
 endfunction
-autocmd BufWritePost *.cpp,*.h,*.c,*.py call UpdateTags()
+autocmd BufWritePost *.cc,*.cpp,*.h,*.c,*.py call UpdateTags()
 
 
 " For taglist

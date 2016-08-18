@@ -56,7 +56,7 @@ autocmd FileType python,r setlocal foldmethod=indent|:normal zR
 autocmd FileType markdown setlocal wrap 
 
 " For coding style
-autocmd FileType python,c,cpp match ErrorMsg '\%>79v.\+'
+"autocmd FileType python,c,cpp match ErrorMsg '\%>79v.\+'
 
 " Press F5 in normal mode or in insert mode to insert the current datestamp: :help i_CTRL-R
 nnoremap <F5> "=strftime("%c")<CR>P

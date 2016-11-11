@@ -26,9 +26,16 @@ nmap <leader>lm :w <bar> Latexmk<cr>
 nmap <leader>lv :!make view<cr>
 nmap <leader>la :w <bar> !make && make view<cr>
 nmap <leader>lcd :lcd %:p:h<cr>
-nmap <leader>ltw :se tw=80<cr>
-autocmd FileType tex setlocal tw=60
+nmap <leader>ltw :se tw=70<cr>
+autocmd FileType tex setlocal tw=70
 autocmd FileType tex setlocal nonumber
+autocmd FileType tex setlocal noai nocin nosi inde=
+
+" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
+" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
+" The following changes the default filetype back to 'tex':
+let g:tex_flavor='latex'
+
 
 " re-format a paragraph
 nnoremap <leader>r gq}
@@ -63,7 +70,8 @@ nnoremap <F5> "=strftime("%c")<CR>P
 inoremap <F5> <C-R>=strftime("%c")<CR>
 
 " for temporary textwidth. Useful for comments
-:noremap <F8> :setlocal tw=79<CR> <bar> :normal gqap<CR> <bar> :setlocal tw=0<CR>
+":noremap <F8> :setlocal tw=79<CR> <bar> :normal gqap<CR> <bar> :setlocal tw=0<CR>
+:nnoremap <F8> :setl noai nocin nosi inde=<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " for Ctags

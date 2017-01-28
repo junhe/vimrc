@@ -69,6 +69,12 @@ autocmd FileType markdown setlocal wrap
 nnoremap <F5> "=strftime("%c")<CR>P
 inoremap <F5> <C-R>=strftime("%c")<CR>
 
+nnoremap <F6> "=strftime("%H:%M")<CR>P
+inoremap <F6> <C-R>=strftime("%H:%M")<CR>
+
+:nnoremap <F7> "=strftime("%a %x")<CR>P
+:inoremap <F7> <C-R>=strftime("%a %x")<CR>
+
 " for temporary textwidth. Useful for comments
 ":noremap <F8> :setlocal tw=79<CR> <bar> :normal gqap<CR> <bar> :setlocal tw=0<CR>
 :nnoremap <F8> :setl noai nocin nosi inde=<CR>

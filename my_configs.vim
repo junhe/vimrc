@@ -104,8 +104,9 @@ function! UpdateTags()
   let cmd = 'ctags -a -f ' . tagfilename . ' --c++-kinds=+p --fields=+iaS --extra=+q ' . '"' . f . '"'
   call DelTagOfFile(f)
   let resp = system(cmd)
+  "let resp2 = system('find . -type f -iregex ".*\.js$" -not -path "./node_modules/*" -exec jsctags {} -f \; | sed "/^$/d" | sort > tags')
 endfunction
-autocmd BufWritePost *.cc,*.cpp,*.h,*.c,*.py call UpdateTags()
+autocmd BufWritePost *.cc,*.cpp,*.h,*.c,*.py,*.js call UpdateTags()
 
 
 " For taglist
@@ -121,6 +122,10 @@ nmap <leader>ttt :TagbarOpenAutoClose<cr>
 "autocmd FileType python TagbarToggle
 setlocal updatetime=800
 let g:tagbar_sort = 0 " sort according to in-file order
+
+
+" For NERDTree
+nmap <leader>nt :NERDTreeToggle<cr>
 
 
 syntax enable

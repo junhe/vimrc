@@ -31,6 +31,9 @@ autocmd FileType tex setlocal tw=70
 autocmd FileType tex setlocal nonumber
 autocmd FileType tex setlocal noai nocin nosi inde=
 
+" For html
+autocmd FileType htmldjango setlocal tabstop=2 softtabstop=2 shiftwidth=2
+
 " OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " The following changes the default filetype back to 'tex':
@@ -57,7 +60,7 @@ nnoremap <Space> za
 noremap <F9> zfa}
 
 " For indent
-autocmd FileType python,r setlocal foldmethod=indent|:normal zR
+autocmd FileType python,r,htmldjango setlocal foldmethod=indent|:normal zR
 autocmd FileType c,cpp,cxx setlocal cindent
 
 autocmd FileType markdown setlocal wrap 
@@ -125,7 +128,7 @@ let g:tagbar_sort = 0 " sort according to in-file order
 
 
 " For NERDTree
-nmap <leader>nt :NERDTreeToggle<cr>
+nmap <leader>nt :NERDTreeFocus<cr>
 
 
 syntax enable

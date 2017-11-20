@@ -5,6 +5,8 @@ set showmode
 set nu
 set nowrap
 
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 let g:neocomplcache_enable_at_startup = 1
 
 " For latex
@@ -60,7 +62,7 @@ nnoremap <Space> za
 noremap <F9> zfa}
 
 " For indent
-autocmd FileType python,r,htmldjango setlocal foldmethod=indent|:normal zR
+autocmd FileType python,r,htmldjango,html,javascript setlocal foldmethod=indent|:normal zR
 autocmd FileType c,cpp,cxx setlocal cindent
 
 autocmd FileType markdown setlocal wrap 

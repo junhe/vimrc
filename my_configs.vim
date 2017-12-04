@@ -29,6 +29,7 @@ nmap <leader>lv :!make view<cr>
 nmap <leader>la :w <bar> !make && make view<cr>
 nmap <leader>lcd :lcd %:p:h<cr>
 nmap <leader>ltw :se tw=70<cr>
+nmap <leader>lcc :se tabstop=2 <bar> shiftwidth=2 <cr>
 autocmd FileType tex setlocal tw=70
 autocmd FileType tex setlocal nonumber
 autocmd FileType tex setlocal noai nocin nosi inde=

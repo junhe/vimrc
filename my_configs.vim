@@ -4,6 +4,7 @@ set showmode
 
 set nu
 set nowrap
+set textwidth=0
 
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'

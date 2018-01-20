@@ -4,6 +4,7 @@ set showmode
 
 set nu
 set nowrap
+set textwidth=0
 
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
@@ -29,6 +30,7 @@ nmap <leader>lv :!make view<cr>
 nmap <leader>la :w <bar> !make && make view<cr>
 nmap <leader>lcd :lcd %:p:h<cr>
 nmap <leader>ltw :se tw=70<cr>
+nmap <leader>lcc :se tabstop=2 <bar> se shiftwidth=2 <cr>
 autocmd FileType tex setlocal tw=70
 autocmd FileType tex setlocal nonumber
 autocmd FileType tex setlocal noai nocin nosi inde=
@@ -64,7 +66,8 @@ noremap <F9> zfa}
 
 " For indent
 autocmd FileType python,r,htmldjango,html,javascript setlocal foldmethod=indent|:normal zR
-autocmd FileType c,cpp,cxx setlocal cindent
+autocmd FileType c,cpp,cxx,cc setlocal cindent
+autocmd FileType c,cpp,cxx,cc setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 autocmd FileType markdown setlocal wrap 
 

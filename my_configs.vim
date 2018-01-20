@@ -43,7 +43,8 @@ let g:tex_flavor='latex'
 
 
 " re-format a paragraph
-nnoremap <leader>r gq}
+"nnoremap <leader>r gq}
+nnoremap <leader>r :se tw=79 <Esc> gq} :se tw=0 <CR>
 
 " For latex-box
 " Toggle TOC

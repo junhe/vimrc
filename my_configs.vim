@@ -64,7 +64,7 @@ nnoremap <Space> za
 noremap <F9> zfa}
 
 " For indent
-autocmd FileType python,r,htmldjango,html,javascript setlocal foldmethod=indent|:normal zR
+autocmd FileType python,r,htmldjango,html,javascript,c,cpp,cxx,cc setlocal foldmethod=indent|:normal zR
 autocmd FileType c,cpp,cxx,cc setlocal cindent
 autocmd FileType c,cpp,cxx,cc setlocal tabstop=2 softtabstop=2 shiftwidth=2
 

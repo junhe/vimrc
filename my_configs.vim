@@ -124,7 +124,7 @@ nmap <leader>tl :TlistToggle<cr>
 " For tagbar
 " Use TagBar instead of TagList, it is better
 nmap <leader>tt :TagbarToggle<cr>
-nmap <leader>to :TagbarOpen<cr>
+nmap <leader>to :TagbarOpen fj<cr>
 nmap <leader>tp :TagbarTogglePause<cr>
 nmap <leader>ttt :TagbarOpenAutoClose<cr>
 " autocmd BufEnter * nested :call tagbar#autoopen(0)

@@ -186,7 +186,7 @@ function Dirsub(target, replacement, files)
     echo cmd2
     exe cmd2
 
-    "argdo update
+    argdo update
 endfunction
 
 

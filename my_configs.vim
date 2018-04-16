@@ -70,6 +70,7 @@ autocmd FileType c,cpp,cxx,cc setlocal cindent
 autocmd FileType c,cpp,cxx,cc setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 autocmd FileType markdown setlocal wrap 
+autocmd FileType markdown setlocal tw=0
 
 " For coding style
 "autocmd FileType python,c,cpp match ErrorMsg '\%>79v.\+'

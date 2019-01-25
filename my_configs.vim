@@ -35,6 +35,20 @@ autocmd FileType tex setlocal tw=70
 autocmd FileType tex setlocal nonumber
 autocmd FileType tex setlocal noai nocin nosi inde=
 
+" For day planning
+"nmap <leader>ltw =70<cr>
+nnoremap <leader>d i[DONE] 
+inoremap <leader>d <C-R>[[DONE] 
+
+nnoremap <leader>a i[PARTIAL] 
+inoremap <leader>a <C-R>[[PARTIAL] 
+
+nnoremap <leader>s i[SKIPPED] 
+inoremap <leader>s <C-R>[[SKIPPED] 
+
+nnoremap <leader>n i[NOT STARTED] 
+inoremap <leader>n <C-R>[[NOT STARTED] 
+
 " For html
 autocmd FileType htmldjango setlocal tabstop=2 softtabstop=2 shiftwidth=2
 

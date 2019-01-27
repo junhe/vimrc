@@ -37,16 +37,16 @@ autocmd FileType tex setlocal noai nocin nosi inde=
 
 " For day planning
 "nmap <leader>ltw =70<cr>
-nnoremap <leader>d i[DONE] 
+nnoremap <leader>d i[DONE] <Esc>
 inoremap <leader>d <C-R>[[DONE] 
 
-nnoremap <leader>a i[PARTIAL] 
+nnoremap <leader>a i[PARTIAL] <Esc>
 inoremap <leader>a <C-R>[[PARTIAL] 
 
-nnoremap <leader>s i[SKIPPED] 
+nnoremap <leader>s i[SKIPPED] <Esc> 
 inoremap <leader>s <C-R>[[SKIPPED] 
 
-nnoremap <leader>n i[NOT STARTED] 
+nnoremap <leader>n i[NOT STARTED] <Esc> 
 inoremap <leader>n <C-R>[[NOT STARTED] 
 
 " For html

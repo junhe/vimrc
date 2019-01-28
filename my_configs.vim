@@ -49,6 +49,12 @@ inoremap <leader>s <C-R>[[SKIPPED]
 nnoremap <leader>n i[NOT STARTED] <Esc> 
 inoremap <leader>n <C-R>[[NOT STARTED] 
 
+nnoremap <leader>time "=strftime("%H:%M") <CR>P i <Esc> 
+inoremap <leader>time <C-R>=strftime("%H:%M")<CR> 
+
+:nnoremap <leader>date "=strftime("%a %x")<CR>P i <Esc> 
+:inoremap <leader>date <C-R>=strftime("%a %x")<CR>
+
 " For html
 autocmd FileType htmldjango setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
@@ -93,11 +99,6 @@ autocmd FileType markdown setlocal tw=0
 nnoremap <F5> "=strftime("%c")<CR>P
 inoremap <F5> <C-R>=strftime("%c")<CR>
 
-nnoremap <F6> "=strftime("%H:%M")<CR>P
-inoremap <F6> <C-R>=strftime("%H:%M")<CR>
-
-:nnoremap <F7> "=strftime("%a %x")<CR>P
-:inoremap <F7> <C-R>=strftime("%a %x")<CR>
 
 " for temporary textwidth. Useful for comments
 ":noremap <F8> :setlocal tw=79<CR> <bar> :normal gqap<CR> <bar> :setlocal tw=0<CR>

@@ -55,6 +55,13 @@ inoremap <leader>time <C-R>=strftime("%H:%M")<CR>
 :nnoremap <leader>date "=strftime("%a %x")<CR>P i <Esc> 
 :inoremap <leader>date <C-R>=strftime("%a %x")<CR>
 
+
+" Fot tab nav
+nnoremap H gT
+nnoremap L gt
+
+
+
 " For html
 autocmd FileType htmldjango setlocal tabstop=2 softtabstop=2 shiftwidth=2
 

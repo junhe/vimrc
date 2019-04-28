@@ -104,6 +104,8 @@ autocmd FileType c,cpp,cxx,cc setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType markdown setlocal wrap 
 autocmd FileType markdown setlocal tw=0
 
+autocmd FileType makefile setlocal expandtab=0
+
 " For coding style
 "autocmd FileType python,c,cpp match ErrorMsg '\%>79v.\+'
 
@@ -167,8 +169,8 @@ nmap <leader>nt :NERDTreeFocus<cr>
 
 syntax enable
 set background=dark
-let g:solarized_termcolors=16
-set t_Co=16
+"let g:solarized_termcolors=256
+"set t_Co=16
 colorscheme solarized
 
 

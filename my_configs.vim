@@ -60,7 +60,9 @@ inoremap <leader>time <C-R>=strftime("%H:%M")<CR>
 nnoremap H gT
 nnoremap L gt
 
-
+" Exit to normal mode in terminal
+tnoremap <ESC><ESC> <C-\><C-N>
+nmap <leader>cl! :bd!<cr>:term<cr>
 
 " For html
 autocmd FileType htmldjango setlocal tabstop=2 softtabstop=2 shiftwidth=2

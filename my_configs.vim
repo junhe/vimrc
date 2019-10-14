@@ -80,7 +80,7 @@ let g:tex_flavor='latex'
 
 " re-format a paragraph
 "nnoremap <leader>r gq}
-nnoremap <leader>r :se tw=79 <Esc> gq} :se tw=0 <CR>
+"nnoremap <leader>r :se tw=79 <Esc> gq} :se tw=0 <CR>
 
 " For latex-box
 " Toggle TOC
@@ -221,4 +221,34 @@ function Dirsub(target, replacement, files)
     argdo update
 endfunction
 
+" Google VIM
+set nocompatible
+source /usr/share/vim/google/google.vim
+Glug youcompleteme-google
+filetype plugin indent on
+syntax on
+
+" Codefmt
+Glug codefmt
+Glug codefmt-google
+augroup autoformat_settings
+  autocmd FileType bzl AutoFormatBuffer buildifier
+  autocmd FileType go AutoFormatBuffer gofmt
+  " Add more filetypes here
+augroup END
+
+nnoremap <leader>fc :FormatCode<CR>
+vnoremap <leader>fc :FormatLines<CR>
+
+
+
+" ultisnips
+Glug ultisnips-google
+let g:UltiSnipsSnippetDirectories = [$HOME.'/.vim_runtime/sources_non_forked/ultisnips', 'UltiSnips']
+let g:UltiSnipsExpandTrigger = "<c-j>"
+let g:UltiSnipsJumpForwardTrigger = "<c-j>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
+
+" related files
+Glug relatedfiles plugin[mappings]='r'
 

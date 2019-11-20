@@ -1,3 +1,5 @@
+set nocompatible
+
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
@@ -5,6 +7,8 @@ set showmode
 set nu
 set nowrap
 set textwidth=0
+set colorcolumn=80
+
 
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
@@ -88,12 +92,6 @@ nmap <leader>lt :LatexTOCToggle<cr>
 
 
 
-" for vim-markdown-folding
-set nocompatible
-if has("autocmd")
-  filetype plugin indent on
-endif
-
 
 nnoremap <Space> za
 noremap <F9> zfa}
@@ -172,7 +170,7 @@ nmap <leader>nt :NERDTreeFocus<cr>
 syntax enable
 set background=dark
 "let g:solarized_termcolors=256
-"set t_Co=16
+"set t_Co=256
 colorscheme solarized
 
 
@@ -222,11 +220,9 @@ function Dirsub(target, replacement, files)
 endfunction
 
 " Google VIM
-set nocompatible
 source /usr/share/vim/google/google.vim
 Glug youcompleteme-google
-filetype plugin indent on
-syntax on
+let g:ycm_key_detailed_diagnostics = '<leader>dd'
 
 " Codefmt
 Glug codefmt
@@ -249,6 +245,26 @@ let g:UltiSnipsExpandTrigger = "<c-j>"
 let g:UltiSnipsJumpForwardTrigger = "<c-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
 
+" piper files
+"Glug piper plugin[mappings]='pf'
+nnoremap <leader>pf :PiperSelectActiveFiles<CR>
+vnoremap <leader>pf :PiperSelectActiveFiles<CR>
+
 " related files
 Glug relatedfiles plugin[mappings]='r'
+
+" blaze
+Glug blaze plugin[mappings]
+
+
+" for vim-markdown-folding
+filetype plugin indent on
+syntax on
+
+let g:syntastic_enable_highlighting=0
+let g:syntastic_enable_signs=1
+"highlight SyntasticErrorLine guibg=#550000
+"highlight SyntasticWarningLine guibg=#331d1e
+"hi SpellBad ctermfg=008 ctermbg=009 guifg=#00875f guibg=#00875f
+"hi SpellCap ctermfg=010 ctermbg=011 guifg=#00875f guibg=#00875f
 

@@ -261,10 +261,18 @@ Glug blaze plugin[mappings]
 filetype plugin indent on
 syntax on
 
-let g:syntastic_enable_highlighting=0
+let g:syntastic_enable_highlighting=1
 let g:syntastic_enable_signs=1
-"highlight SyntasticErrorLine guibg=#550000
-"highlight SyntasticWarningLine guibg=#331d1e
-"hi SpellBad ctermfg=008 ctermbg=009 guifg=#00875f guibg=#00875f
-"hi SpellCap ctermfg=010 ctermbg=011 guifg=#00875f guibg=#00875f
+" Brown
+highlight SyntasticErrorLine guibg=#550000
+" Dark brown
+highlight SyntasticWarningLine guibg=#331d1e
+" Get color here https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg
+"           letter color  bg color
+"           white              red
+hi SpellBad ctermfg=015 ctermbg=009 guifg=#00875f guibg=#00875f
+hi SpellBad cterm=NONE ctermfg=015 ctermbg=009 guifg=#00875f guibg=#00875f
+
+hi SpellCap ctermfg=015 ctermbg=009 guifg=#00875f guibg=#00875f
+hi SpellCap cterm=NONE ctermfg=015 ctermbg=009 guifg=#00875f guibg=#00875f
 

@@ -8,6 +8,7 @@ set nu
 set nowrap
 set textwidth=0
 set colorcolumn=80
+set cursorline
 
 
 let g:syntastic_cpp_compiler = 'clang++'
@@ -35,6 +36,23 @@ nmap <leader>la :w <bar> !make && make view<cr>
 nmap <leader>lcd :lcd %:p:h<cr>
 nmap <leader>ltw :se tw=70<cr>
 nmap <leader>lcc :se tabstop=2 <bar> se shiftwidth=2 <cr>
+" highlight the word under cursor
+nmap <leader>h *N
+" visually select lines of an enclosed area after cursor. For example, 
+" Foo(xx, xx); // the whole line fill be selected.
+nmap <leader>sp V%
+" Select current line and the {} scope after it. This can select the whole
+" function below.
+" void Foo(xx) {
+"   xxx {}
+" }
+" Or the whole scope here:
+" {
+"   ..Foo();
+" }
+nmap <leader>s{ V/{<CR>%:nohl<CR>
+
+
 autocmd FileType tex setlocal tw=70
 autocmd FileType tex setlocal nonumber
 autocmd FileType tex setlocal noai nocin nosi inde=
@@ -275,4 +293,8 @@ hi SpellBad cterm=NONE ctermfg=015 ctermbg=009 guifg=#00875f guibg=#00875f
 
 hi SpellCap ctermfg=015 ctermbg=009 guifg=#00875f guibg=#00875f
 hi SpellCap cterm=NONE ctermfg=015 ctermbg=009 guifg=#00875f guibg=#00875f
+
+
+
+
 

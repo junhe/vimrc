@@ -59,11 +59,7 @@ autocmd FileType tex setlocal noai nocin nosi inde=
 
 " For day planning
 "nmap <leader>ltw =70<cr>
-nnoremap <leader>d i[DONE] <Esc>
-inoremap <leader>d <C-R>[[DONE] 
-
-nnoremap <leader>a i[PARTIAL] <Esc>
-inoremap <leader>a <C-R>[[PARTIAL] 
+nnoremap <leader>d "_d <Esc>
 
 nnoremap <leader>s i[SKIPPED] <Esc> 
 inoremap <leader>s <C-R>[[SKIPPED] 
@@ -80,10 +76,7 @@ inoremap <leader>time <C-R>=strftime("%H:%M")<CR>
 nnoremap <leader>sessions i- 08:00-08:30<CR>- 08:30-09:00<CR>- 09:00-09:30<CR>- 09:30-10:00<CR>- 10:00-10:30<CR>- 10:30-11:00<CR>- 11:00-11:30<CR>- 11:30-12:00<CR>- 12:00-12:30<CR>- 12:30-01:00<CR>- 01:00-01:30<CR>- 01:30-02:00<CR>- 02:00-02:30<CR>- 02:30-03:00<CR>- 03:00-03:30<CR>- 03:30-04:00<CR>- 04:00-04:30<CR>- 04:30-05:00<CR><Esc>
 inoremap <leader>sessions - 08:00-08:30<CR>- 08:30-09:00<CR>- 09:00-09:30<CR>- 09:30-10:00<CR>- 10:00-10:30<CR>- 10:30-11:00<CR>- 11:00-11:30<CR>- 11:30-12:00<CR>- 12:00-12:30<CR>- 12:30-01:00<CR>- 01:00-01:30<CR>- 01:30-02:00<CR>- 02:00-02:30<CR>- 02:30-03:00<CR>- 03:00-03:30<CR>- 03:30-04:00<CR>- 04:00-04:30<CR>- 04:30-05:00<CR>
 
-
-
-
-" Fot tab nav
+" For tab nav
 nnoremap H gT
 nnoremap L gt
 
@@ -269,7 +262,7 @@ nnoremap <leader>pf :PiperSelectActiveFiles<CR>
 vnoremap <leader>pf :PiperSelectActiveFiles<CR>
 
 " related files
-Glug relatedfiles plugin[mappings]='r'
+Glug relatedfiles plugin[mappings]='a'
 
 " blaze
 Glug blaze plugin[mappings]

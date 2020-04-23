@@ -57,9 +57,19 @@ autocmd FileType tex setlocal tw=70
 autocmd FileType tex setlocal nonumber
 autocmd FileType tex setlocal noai nocin nosi inde=
 
+
+" Delete without yanking
+nnoremap <leader>d "_d <Esc>
+" To copy a word and replace another
+" yiw, move, ,p
+nnoremap <leader>p viw"_dP
+" To copy a line and replace another
+" yy, move, ,pl
+nnoremap <leader>pl V"_dP
+
+
 " For day planning
 "nmap <leader>ltw =70<cr>
-nnoremap <leader>d "_d <Esc>
 
 nnoremap <leader>s i[SKIPPED] <Esc> 
 inoremap <leader>s <C-R>[[SKIPPED] 

@@ -52,6 +52,9 @@ nmap <leader>sp V%
 " }
 nmap <leader>s{ V/{<CR>%:nohl<CR>
 
+" Resize windows
+noremap <silent> <C-S-Left> :vertical resize +10<CR>
+noremap <silent> <C-S-Right> :vertical resize -10<CR>
 
 autocmd FileType tex setlocal tw=70
 autocmd FileType tex setlocal nonumber
@@ -67,12 +70,16 @@ nnoremap <leader>p viw"_dP
 " yy, move, ,pl
 nnoremap <leader>pl V"_dP
 
+" With this mapping in your vimrc, you can easily enter a command to substitute all occurrences of the word under the cursor:
+" https://vim.fandom.com/wiki/Search_and_replace_the_word_under_the_cursor
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
+
 
 " For day planning
 "nmap <leader>ltw =70<cr>
 
-nnoremap <leader>s i[SKIPPED] <Esc> 
-inoremap <leader>s <C-R>[[SKIPPED] 
+"nnoremap <leader>s i[SKIPPED] <Esc> 
+"inoremap <leader>s <C-R>[[SKIPPED] 
 
 nnoremap <leader>n i[NOT STARTED] <Esc> 
 inoremap <leader>n <C-R>[[NOT STARTED] 

@@ -72,8 +72,7 @@ nnoremap <leader>pl V"_dP
 
 " With this mapping in your vimrc, you can easily enter a command to substitute all occurrences of the word under the cursor:
 " https://vim.fandom.com/wiki/Search_and_replace_the_word_under_the_cursor
-nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
-
+nnoremap <Leader>s :,$s/\<<C-r><C-w>\>/
 
 " For day planning
 "nmap <leader>ltw =70<cr>
